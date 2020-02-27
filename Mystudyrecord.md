@@ -8,3 +8,4 @@ while x%y!=0:
     x=y
     y=r
 print(y)
+
