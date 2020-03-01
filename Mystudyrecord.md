@@ -34,3 +34,13 @@ def Fib(n):
         return(n) #exit
     else:
         return Fib(n-1)+Fib(n-2)
+
+#Filename: Hanoi
+def hanoi(a,b,c,n): #把n个 从a经过b移到c
+    if n==1:
+        print(a,'->',c)
+    else:
+        hanoi(a,c,b,n-1) #把n-1个 从a经过c移到b
+        print(a,'->',c)  #上一步完成后，把最底下那一个移到c或写作hanoi(a,c,1)
+        hanoi(b,a,c,n-1) #把n-1个 从b经过a移到c
+hanoi('a','b','c',4)
