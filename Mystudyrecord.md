@@ -18,3 +18,19 @@ for i in range(21):
         if k>=0:
             t+=1
 print(t)
+
+
+#Fibonacci number f(n)=f(n-1)+f(n-2)
+def Fib(n):
+    a=0,b=1 #a,b=0,1
+    count=1
+    while count<n:
+        a,b=b,a+b
+        count+=1
+        print(a)
+        
+def Fib(n):
+    if n==0 or n==1:
+        return(n) #exit
+    else:
+        return Fib(n-1)+Fib(n-2)
