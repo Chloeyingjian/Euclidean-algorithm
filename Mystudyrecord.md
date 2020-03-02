@@ -54,3 +54,14 @@ def f(x):
 a=3
 f(8)
 print(a)
+
+#change the position
+import os
+os.getcwd()  #回到当前位置
+path='/Users/apple/downloads'
+os.chdir(path)
+os.getcwd() #在Python shell里要一行一行地，先打开文件）
+'/Users/apple/downloads'
+os.rename('Simon-vs.-the-Homo-Sapiens-Agen-Albertalli_-Becky.txt','Simon-love.txt')
+os.remove('test1.text')
+
