@@ -44,3 +44,13 @@ def hanoi(a,b,c,n): #把n个 从a经过b移到c
         print(a,'->',c)  #上一步完成后，把最底下那一个移到c或写作hanoi(a,c,1)
         hanoi(b,a,c,n-1) #把n-1个 从b经过a移到c
 hanoi('a','b','c',4)
+
+#全局变量
+def f(x):
+    global a #是全局变量，出来以后是修改后值，5
+    print(a)
+    a=5
+    print(a+x)
+a=3
+f(8)
+print(a)
