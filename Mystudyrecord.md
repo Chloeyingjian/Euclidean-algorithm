@@ -84,3 +84,20 @@ print(dt)
 ts=dt.timestamp()          #timestamp把时间转换成时间戳
 ts
 print(datatime.fromtimestamp(ts))#fromtimestamp把时间戳转换成本地时间
+
+#Try except处理异常
+try:
+    num1=int(input('Enter the first number'))
+    num2=int(input('Enter the second number'))
+    print(num1/num2)
+except ZeroDivisionError as err:
+    print('The second number cannot be zero')
+    print(err)
+#处理多种异常
+try:
+    num1=int(input('Enter the first number'))
+    num2=int(input('Enter the second number'))
+    print(num1/num2)
+except Exception as err: #Exception 表示是异常的类型 
+    print('Something went wrong')
+    print(err) #err 输出异常的原因
