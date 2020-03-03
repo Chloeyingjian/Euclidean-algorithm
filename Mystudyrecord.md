@@ -65,3 +65,22 @@ os.getcwd() #在Python shell里要一行一行地，先打开文件）
 os.rename('Simon-vs.-the-Homo-Sapiens-Agen-Albertalli_-Becky.txt','Simon-love.txt')
 os.remove('test1.text')
 
+#random函数
+import random
+random.choice(['C++','Java','python'])
+random.randint(1,100)
+
+#datetime函数
+from datetime import date
+date.today()
+from datetime import time
+tm=time(10,38,22) #设定时间
+print(tm)
+from datetime import datetime 
+dt=datetime.now  #当下的日期+时间
+print=(dt.strftime('%a,%b,%d,%Y,%H,%M') #打印
+dt=datetime(2017,6,6,23,29) #计算机新纪元时间1970.1.1.0
+print(dt) 
+ts=dt.timestamp()          #timestamp把时间转换成时间戳
+ts
+print(datatime.fromtimestamp(ts))#fromtimestamp把时间戳转换成本地时间
