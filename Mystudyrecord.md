@@ -101,3 +101,20 @@ try:
 except Exception as err: #Exception 表示是异常的类型 
     print('Something went wrong')
     print(err) #err 输出异常的原因
+else:
+    print('Aha,everything is ok.')
+While True: #可以多次输入
+    try:
+        num1=int(input('number1'))
+        num2=int(input('number2'))
+        print(num1/num2)
+        break #位置视情况而定
+    except ValueError:
+        print('please input a digit')
+    except ZeroDivisionError:
+        print('The second number cannot be zero')
+        
+#with语句
+with open('data.txt')as f:
+    for line in f:
+        print(line,end='')
