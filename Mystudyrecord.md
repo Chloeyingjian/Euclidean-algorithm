@@ -118,3 +118,36 @@ While True: #可以多次输入
 with open('data.txt')as f:
     for line in f:
         print(line,end='')
+        
+#寻找亲密对数
+def fac(n):
+    for A in range(2, n):
+        B = 0
+        b = 0
+        for j in range(1, A):  # 算出A的因子和B
+            if A % j == 0:
+                B += j         # B可能大于A
+        for j in range(1, B):  # 算出B的因子和b
+            if B % j == 0:
+                b += j
+        if b == A and A<=B:  # 如果a的因子和b等于i就说明找到了一对亲密数对，如何保证不重复，不漏解？
+            print("{}-{}".format(A, B))
+n = int(input())
+fac(n)
+
+def fac(n):
+    for A in range(2, n):
+        B = 0
+        b = 0
+        for j in range(1, A):  # 算出A的因子和B
+            if A % j == 0:
+                B += j
+        if B<=A:              
+            continue           # 避免重复计算
+        for j in range(1, B):  # 算出B的因子和b
+            if B % j == 0:
+                b += j
+        if b == A:  # 如果a的因子和b等于i就说明找到了一对亲密数对，如何保证不重复，不漏解？
+            print("{}-{}".format(A, B))
+n = int(input())
+fac(n)
