@@ -1,0 +1,5 @@
+#获取数据
+import urllib.request
+response=urllib.request.urlopen('http://www.baidu.com')
+#仅打印response得到的是对象-结构化的数据，.read得到的是按标签分类的编码语言，再解码
+print(response.read().decode('utf-8')) 
